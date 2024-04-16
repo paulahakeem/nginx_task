@@ -1,0 +1,14 @@
+version: '2.2'
+services:
+
+
+  nginx:
+    build:
+      context: ./nginx/
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./nginx/download:/home/download/
+      - ./nginx/passwords/:/etc/pwd/
+
